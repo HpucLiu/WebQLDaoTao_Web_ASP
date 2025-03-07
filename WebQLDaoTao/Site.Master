@@ -49,6 +49,22 @@
                         </li>
                         <li><a href="#">Quản lý điểm thi</a></li>
                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <%
+                            if (Session["username"] == null)
+                            {
+
+                            %>
+                        <li><a href="Login.aspx"><span class="glyphicon glyphicon-log-in"></span>  Đăng nhập</a></li>
+                        <%
+                            }
+                            else
+                            {
+                                %>
+                           <li><a href="LogOut.aspx"><span class="glyphicon glyphicon-log-out"></span>  Đăng xuất</a></li>
+                        <%} %>
+                    </ul>
                 </div>
             </div>
         </nav>

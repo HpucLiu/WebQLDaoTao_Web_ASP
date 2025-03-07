@@ -72,7 +72,7 @@
                 </asp:TemplateField>
             </Columns>
             <HeaderStyle BackColor="#0066cc" ForeColor="#ffffff" />
-            <PagerStyle HorizontalAlign="Center" CssClass="pager-style" />
+            <PagerStyle CssClass="pagination-ys" HorizontalAlign="center" />
         </asp:GridView>
     </div>
 </asp:Content>

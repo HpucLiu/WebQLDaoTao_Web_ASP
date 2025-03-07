@@ -55,12 +55,13 @@
     </div>
   </div>
 </div>
-    <asp:GridView ID="gvKhoa" runat="server" AutoGenerateColumns="False" DataSourceID="obsKhoa" CssClass="table table-bordered table-hover" DataKeyNames="MaKH">
+    <asp:GridView ID="gvKhoa" runat="server" AutoGenerateColumns="False" DataSourceID="obsKhoa" AllowPaging="True" PageSize="5" CssClass="table table-bordered table-hover" DataKeyNames="MaKH">
         <Columns>
             <asp:BoundField DataField="TenKH" HeaderText="Tên Khoa" SortExpression="TenKH" />
             <asp:BoundField DataField="MaKH" HeaderText="Mã Khoa" SortExpression="MaKH" />
             <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" />
         </Columns>
+        <PagerStyle CssClass="pagination-ys" HorizontalAlign="center" />
     </asp:GridView>
     <asp:ObjectDataSource ID="obsKhoa" runat="server" DataObjectTypeName="WebQLDaoTao.Models.Khoa" DeleteMethod="Delete" InsertMethod="Insert" SelectMethod="getAll" TypeName="WebQLDaoTao.Models.KhoaDAO" UpdateMethod="Update">
         <UpdateParameters>

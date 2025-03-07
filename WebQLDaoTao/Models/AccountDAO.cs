@@ -34,5 +34,24 @@ namespace WebQLDaoTao.Models
                 kq = true; //success
             return kq;
         }
+        public Account findByUsername(string username)
+        {
+            Account tk = null;
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("select * from  taikhoan where tendangnhap=@tendangnhap", conn);
+            cmd.Parameters.AddWithValue("@tendangnhap", username);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+                tk = new Account
+                {
+                    TenDangNhap = dr["tendangnhap"].ToString(),
+                    MatKhau = dr["matkhau"].ToString(),
+                    VaiTro = dr["vaitro"].ToString()
+                };
+            return tk;
+
+
+        }
     }
 }

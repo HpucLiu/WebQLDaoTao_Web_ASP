@@ -7,11 +7,13 @@ using System.Web.UI.WebControls;
 using WebQLDaoTao.Models;
 namespace WebQLDaoTao
 {
-    public partial class QLMonHoc : System.Web.UI.Page
+    public partial class QLMonHoc : CBDTPage
     {
         MonHocDAO mhDAO = new MonHocDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load(sender, e);
+
             if (!Page.IsPostBack)
             {
                 LoadData();

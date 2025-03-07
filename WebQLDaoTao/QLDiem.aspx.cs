@@ -8,12 +8,13 @@ using WebQLDaoTao.Models;
 
 namespace WebQLDaoTao
 {
-    public partial class QLDiem : System.Web.UI.Page
+    public partial class QLDiem : CBDTPage
     {
         MonHocDAO mhDao = new MonHocDAO();
         KetQuaDAO kqDAO = new KetQuaDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
+            base.Page_Load(sender, e);
             if (!Page.IsPostBack)
             {
                 ddlMonHoc.DataSource = mhDao.getAll();

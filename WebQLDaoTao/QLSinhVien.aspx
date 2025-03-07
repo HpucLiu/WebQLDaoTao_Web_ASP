@@ -136,7 +136,7 @@
                 </asp:TemplateField>
             </Columns>
             <HeaderStyle BackColor="#0066cc" ForeColor="#ffffff" />
-            <PagerStyle CssClass="pager-style" HorizontalAlign="Center" />
+            <PagerStyle CssClass="pagination-ys" HorizontalAlign="center" />
         </asp:GridView>
     </div>
     <asp:ObjectDataSource ID="ods_sinhvien" runat="server" SelectMethod="getAll" TypeName="WebQLDaoTao.Models.SinhVienDAO" DeleteMethod="Delete" InsertMethod="Insert" UpdateMethod="Update" DataObjectTypeName="WebQLDaoTao.Models.SinhVien"></asp:ObjectDataSource>
